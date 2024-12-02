@@ -1,20 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random Quote Generator</title>
-    <link rel="stylesheet" href="css/main.css"/>
-    <script src="js/index.js" ></script>
+    <title>Bookmark</title>
+    <link rel="icon" href="./images/istockphoto-1369355289-612x612.jpg" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+
   </head>
   <body>
-    <div>
-      <h1>Quote of the Day</h1>
-      <p>Press the button below to recieve a random quote!</p>
-
-      <button onclick="generateQuote();">New Quote</button>
-      <p id="quoteOutput">"You miss 100% of the shots you don't take."</p>
-      <p id="authorOutput">--Wayne Gretzy</p>
-    </div>
-  </body>
+    <section class="position-relative">
+      <div class="overlay d-flex justify-content-center align-items-center">
+    
+        <div class="snap">
+          <div class="close d-flex align-items-center justify-content-between">
+            <div class="balls d-flex">
+              <div class="ms-4 mt-3 border rounded-circle bg-danger"></div>
+              <div class="ms-4 mt-3 border rounded-circle bg-warning"></div>
+              <div class="ms-4 mt-3 border rounded-circle bg-success"></div>
+            </div>
+           <div class="me-4 close-icon"> <i class="fa-solid fa-xmark fw-bold"></i></div>
+          </div>
+          <p class="mt-3 p-icon ms-3 fw-bold lead">Site Name or Url is not valid, Please follow the rules below :</p>
+          <div class=" d-flex align-items-center">
+          
+            <i class="  fa-regular fa-circle-right p-2 text-danger "></i>
+            <p class="p-icon fw-light">Site name must contain at least 3 characters and first char must capital</p>
+          </div>
+          <div class=" d-flex align-items-center">
+          
+            <i class="  fa-regular fa-circle-right p-2 text-danger "></i>
+            <p class="p-icon fw-light">Site URL must be a valid one</p>
+          </div>
+        </div>
+        
+        
+        </div>
+        
+        
+        <div class="container">
+          <h1 class="h1">BookMarker</h1>
+          <hr>
+          <div class="contact  text-center">
+        <h2>
+        
+          <i class="fa-solid fa-bookmark"></i>
+          Bookmark your favorite sites
+          <i class="fa-solid fa-bookmark"></i>
+        </h2>
+          <label for="" class="d-flex mb-3 mt-3">
+            <i class="fa-solid fa-book-bookmark pe-2"></i>
+            <span class="site">Site Name</span>
+          </label>
+        
+          <input type="text" placeholder="Bookmark Name" class="form-control" id="inputname">
+         
+        
+          <label for="" class="d-flex mb-3 mt-3">
+            <i class="fa-solid fa-link pe-2"></i>
+            <span class="site">Site URL</span>
+          </label>
+          <input type="text" placeholder="Website URL" class="form-control" id="inputurl">
+          <button type="button" class="submit mt-5" id="sumbtn">submit</button>
+        
+          </div>
+          <hr class="mt-4 mb-5">
+          <table class="table mt-4 text-center bg-white ">
+            <thead>
+              <tr>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"> 
+            </tbody>
+          </table>
+        </div>
+    </section>
+   
+    
+    
+    
+    <script src="./js/index.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+    
+    </body>
 </html>

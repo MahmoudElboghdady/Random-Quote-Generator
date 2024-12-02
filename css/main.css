@@ -1,23 +1,148 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body{
-    background-color: lightblue;
+  background-color: #f7ecde;
+  font-family: "PT Sans Caption", sans-serif;
 }
 
-div{
-    text-align: center;
+.h1{
+font-size: 50px;
+font-family: 'Pacifico', cursive;
+color: #352e28;
+text-align: center;   
+font-weight: 500;
+position: relative;
+width: fit-content;
+margin: auto;
+margin-top: 50px;
+font-style: italic;
+letter-spacing: 2px;
 }
-h1{
-    font-size: 80px;
-    font-family: Impact;
+
+.h1::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color:#fec260;
+  width:100%;
+  height: 30%;
+  transition: height 0.2s;
+  cursor: text;
+  z-index: -1;
 }
-p{
-    font-size: 35px;
+.h1:hover::after{
+  height: 70%;
 }
-button{
-    width: 250px;
-    height: 80px;
-    background-color: blue;
-    color: white;
+hr{
+  border: 2px dashed black !important;
+  opacity: 1;
+  margin-top: 50px;
+  opacity: 75%;
 }
-button:hover{
-    background-color: green;
+h2 i ,h2{
+  color: #b4ac4a;
+
 }
+h2{
+  font-family: "Righteous", cursive;
+  font-size: 25px;
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.site{
+  font-weight: 600 ;
+}
+
+  .form-control:focus {
+outline: none !important;
+border: none  !important;
+box-shadow: none !important;
+outline: 2px solid #fec260 !important;
+box-shadow: 10px 10px 5px -3px rgba(231,166,26,0.53);
+-moz-box-shadow: 10px 10px 5px -3px rgba(231,166,26,0.53);
+box-shadow: 10px 10px 5px -3px rgba(231,166,26,0.53) !important;
+  }
+  .submit{
+      background-color: #d1512d;
+      color: #fff;
+      padding: 10px;
+      width: 15%;
+      border-radius: 6px;
+      outline: none;
+      border: none;
+
+  }
+
+  .submit:hover{
+      background-color: #e7491d;
+  }
+tr{
+  border-bottom: 2px solid #ddd;
+  padding: 20px;
+  border-radius: 6px;
+}
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #00000075;
+  z-index: 5555;
+  opacity: 0;
+  z-index: -1;
+ 
+}
+.snap{
+  width: 50%;
+  height: 50%;
+  background-color: #fff;
+  border-radius: 10px;
+
+}
+.balls > div{
+  width: 30px;
+  height: 30px;
+ 
+}
+.p-icon{
+  font-size: 30px;
+}
+.fa-regular{
+  font-size: 25px;
+}
+.close-icon{
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media(max-width:1400px){
+  .p-icon{
+      font-size: 20px;
+  }
+  @media(max-width:700px){
+      
+.snap{
+  width: 95%;
+}
+.submit{
+  width: 25%;
+}
+
+  }
+  
+}
+.clear{
+  opacity: 0;
+  z-index: -1;
+}
+.appear{
+opacity: 1;
+z-index: 5;
+}
+
